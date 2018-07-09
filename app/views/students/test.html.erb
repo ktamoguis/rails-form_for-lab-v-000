@@ -7,6 +7,20 @@
   <%= f.submit %>
 <% end %>
 
+
+
+<h3>Student Form</h3>
+
+<%= form_for(@student) do |f| %>
+  <label>Student first name:</label><br>
+  <%= f.text_field :first_name %><br>
+
+  <label>Student last name:</label><br>
+  <%= f.text_field :last_name %><br>
+
+  <%= f.submit %>
+<% end %>
+
 <%= form_tag students_path do %>
   <h1>Student Form</h1>
   <label>Fist Name:</label><br>
@@ -31,3 +45,15 @@
   <%= submit_tag "Update Student" %>
 <% end %>
 
+<%= form_tag students_path do %>
+  <h1>Student Form</h1>
+  <label>Fist Name:</label><br>
+  <input type="text" id="student_first_name" name="student[first_name]"><br>
+  <!--<%= text_field_tag :'first_name' %><br>-->
+
+  <label>Last Name:</label><br>
+  <!--<%= text_field_tag :'last_name' %><br>-->
+  <input type="text" id="student_last_name" name="student[last_name]"><br>
+
+  <%= submit_tag "Create Student" %>
+<% end %>
